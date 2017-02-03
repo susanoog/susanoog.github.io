@@ -3,16 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-=======
 Susanow
 =======
 
 Susanowは次世代高性能ネットワーキングを支える基盤プラットフォームです。
 DPDKをバックエンドとし、チューニングレスな通信基盤を提供します。
 
+Susanow(正式なスペルはSusanoo/漢字:素戔嗚)は日本古来のわがままな神です。
+ライバルがKamuee0というソフトウェアルータなので同じく日本の神様の名前を
+いただきました。
 
-Concept
-^^^^^^^
+詳しくは :doc:`introduction` を参照ください
+
+
+Concept/Implementation
+^^^^^^^^^^^^^^^^^^^^^^
+
  - チューニングレス -> 起動環境に対して最適に自己チューニング
  - 実装ミスの起こらない実装 -> 拡張者にもそれを束縛したい
  - 128Byteでワイヤーレート
@@ -22,6 +28,10 @@ Concept
  - ShellなどのUtil的なインターフェースも持つ
 
 詳しくは :doc:`feature` を参照ください
+
+SusanowはC++11/DPDK/Linuxで動作をするプラットフォームです。
+高性能に動くだけでなく、美しい設計にしていくのも目標です。
+詳しい実装に関しては :doc:`implement` を参照してください。
 
 
 Benchmark
@@ -44,7 +54,9 @@ Documentation Contens
 .. toctree::
   :maxdepth: 1
 
+  introduction.rst
   feature.rst
+  implement.rst
   benchmark.rst
   license.rst
 

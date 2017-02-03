@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>検索 &mdash; Susanow 0.0 ドキュメント</title>
+  <title>Implementation &mdash; Susanow 0.0 ドキュメント</title>
   
 
   
@@ -32,7 +32,7 @@
   
         <link rel="index" title="索引"
               href="genindex.html"/>
-        <link rel="search" title="検索" href="#"/>
+        <link rel="search" title="検索" href="search.html"/>
     <link rel="top" title="Susanow 0.0 ドキュメント" href="index.html"/> 
 
   
@@ -68,7 +68,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -83,9 +83,7 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Motivation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Feature</a></li>
-<li class="toctree-l1"><a class="reference internal" href="implement.html">Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Copyrigh and Licence</a></li>
 </ul>
@@ -110,7 +108,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -118,8 +116,12 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>検索</li>
+    <li>Implementation</li>
       <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/implementation.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -128,19 +130,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="implementation">
+<h1>Implementation<a class="headerlink" href="#implementation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li>[]は例外を吐かない -&gt; .at(n)を使う</li>
+<li>高速イテレーションをしたいならイテレータを使う</li>
+<li>Newは極力使わない。唯一ポリモーフィズム環境でのみ使用
+それもスマートポインタにする</li>
+<li>暗黙な宣言はなくす -&gt; すべて明示的に書く -&gt; ぼくでもわかる</li>
+<li>Moveセマンティクスを使ってデータの保証を安全にする</li>
+<li>ドキュメントも同時に開発</li>
+</ul>
+</div></blockquote>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
           </div>
@@ -183,7 +187,6 @@
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -199,14 +202,7 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
