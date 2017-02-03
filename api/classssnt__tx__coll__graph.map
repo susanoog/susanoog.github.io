@@ -1,0 +1,4 @@
+<map id="ssnt_tx" name="ssnt_tx">
+<area shape="rect" id="node2" href="$classssnlib_1_1ssn__thread.html" title="{ssnlib::ssn_thread\n||+ operator()()\l+ kill()\l}" alt="" coords="5,42,153,134"/>
+<area shape="rect" id="node3" href="$classssnlib_1_1System__interface.html" title="{ssnlib::System_interface\l\&lt; CPU, PORT \&gt;\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l}" alt="" coords="177,5,368,171"/>
+</map>
