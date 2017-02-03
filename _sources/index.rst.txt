@@ -1,5 +1,5 @@
 .. Susanow documentation master file, created by
-   sphinx-quickstart on Fri Feb  3 12:51:46 2017.
+   sphinx-quickstart on Fri Feb  3 13:01:27 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
