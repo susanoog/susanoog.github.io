@@ -1,0 +1,6 @@
+
+Design
+======
+
+
+.. include:: sidebar.rst

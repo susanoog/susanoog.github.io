@@ -1,0 +1,16 @@
+
+=========
+Benchmark
+=========
+
+
+ - CPU Test
+     - null_pmdを使用してCPUの限界を測る
+ - Traffic Test
+     - 実際にトラフィックジェネレータを使用して実測値を測る
+     - Pktegen-DPDKを使用
+ - Envs (not tested)
+     - PC/WS (Core i7, Xeon E5, Xeon Phi)
+     - Tester Pktgen-DPDK, Spirent
+
+

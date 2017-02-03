@@ -3,18 +3,49 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Susanow's documentation!
-===================================
+=======
+Susanow
+=======
+
+Susanowは次世代高性能ネットワーキングを支える基盤プラットフォームです。
+DPDKをバックエンドとし、チューニングレスな通信基盤を提供します。
+
+
+Concept
+^^^^^^^
+ - チューニングレス -> 起動環境に対して最適に自己チューニング
+ - 実装ミスの起こらない実装 -> 拡張者にもそれを束縛したい
+ - 128Byteでワイヤーレート
+ - すでに実装されたクラスを拡張することができる
+ - C++11の恩恵をフルに使用 (MoveSmantics/SmartPtr)
+ - HPNのソフト開発に必要な機能を多く含む
+ - ShellなどのUtil的なインターフェースも持つ
+
+詳しくは :doc:`feature` を参照ください
+
+
+Benchmark
+^^^^^^^^^
+PC/Workstationを使用してSusanowのパフォーマンスの計測を行います。
+現在は10GbEをサポートしています。
+詳しくは :doc:`benchmark` を参照ください
+
+
+
+Documentation Contens
+^^^^^^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   See the sections below for more details.
+
+
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 1
+
+  feature.rst
+  benchmark.rst
+  license.rst
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
