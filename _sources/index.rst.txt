@@ -1,44 +1,51 @@
+
 .. Susanow documentation master file, created by
    sphinx-quickstart on Fri Feb  3 13:01:27 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+
 Susanow
 =======
 
-Susanowは次世代高性能ネットワーキングを支える基盤プラットフォームです。
-DPDKをバックエンドとし、チューニングレスな通信基盤を提供します。
+Susanow is a next generation platform to perform High Performance Networking.
+Its backend is DPDK, provides Tuning-less platform.
 
-Susanow(正式なスペルはSusanoo/漢字:素戔嗚)は日本古来のわがままな神です。
-ライバルがKamuee0というソフトウェアルータなので同じく日本の神様の名前を
-いただきました。
+Susanow (須佐之男 (スサノオ)?, romanized as Susano-o, Susa-no-O, Susano'o,
+and Susanowo), also known as Takehaya Susanoo-no-Mikoto (建速須佐之男命?)
+and Kumano Ketsumiko no kami at Kumano shrine,
+is the Shinto god of the sea and storms.
+He is also considered to be ruler of Neno-Katasu-Kuni
+(now in Yasugi-shi, Shimane-ken). He is married to Kushinadahime.
 
-詳しくは :doc:`introduction` を参照ください
+Why we named this platform, Susanow is influenced by Kamuee0 that is
+a high speed software router developed by Head of Technology Development team
+in NTT-Comunications.
+
+More detail, please see :doc:`introduction` .
+
 
 
 Concept/Implementation
 ^^^^^^^^^^^^^^^^^^^^^^
 
- - チューニングレス -> 起動環境に対して最適に自己チューニング
- - 実装ミスの起こらない実装 -> 拡張者にもそれを束縛したい
- - 128Byteでワイヤーレート
- - すでに実装されたクラスを拡張することができる
- - C++11の恩恵をフルに使用 (MoveSmantics/SmartPtr)
- - HPNのソフト開発に必要な機能を多く含む
- - ShellなどのUtil的なインターフェースも持つ
+ - Tuning-Less
+ - Safe Implementation
+ - Wirerate (128byte packet)
+ - Extensible
+ - Using useful components on C++11 (move semantics/smart ptr)
+ - All module are included that are needed HighPerformanceNetworking
 
-詳しくは :doc:`feature` を参照ください
+More detail, please see :doc:`feature` .
+If you want to know implementation or extend susanow, please see :doc:`implement` .
 
-SusanowはC++11/DPDK/Linuxで動作をするプラットフォームです。
-高性能に動くだけでなく、美しい設計にしていくのも目標です。
-詳しい実装に関しては :doc:`implement` を参照してください。
 
 
 Benchmark
 ^^^^^^^^^
-PC/Workstationを使用してSusanowのパフォーマンスの計測を行います。
-現在は10GbEをサポートしています。
-詳しくは :doc:`benchmark` を参照ください
+
+We calc benchmark on PC/Workstation. Now, Susanow support 10GbE.
+More detail, please see :doc:`benchmark` .
 
 
 
@@ -59,5 +66,10 @@ Documentation Contens
   implement.rst
   benchmark.rst
   license.rst
+  drcp.rst
+  glossary.rst
+  usecase.rst
+
+
 
 

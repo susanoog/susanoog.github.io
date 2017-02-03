@@ -87,15 +87,17 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Motivation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Feature</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">実装済みの機能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#to-add-feature">To Add Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#already-implemented">Already Implemented</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suchedules">Suchedules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dynamic-cpu-pinning-optimization">Dynamic CPU Pinning Optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cpu-pinning-pattern">Cpu Pinning Pattern</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="implement.html">Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Copyrigh and Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drcp.html">Dynamic Re CPU Pinning (DRCP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
 </ul>
 
             
@@ -142,26 +144,35 @@
             
   <div class="section" id="feature">
 <h1>Feature<a class="headerlink" href="#feature" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="section" id="id1">
-<h2>実装済みの機能<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="already-implemented">
+<h2>Already Implemented<a class="headerlink" href="#already-implemented" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>Dynamic reconf</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="to-add-feature">
-<h2>To Add Feature<a class="headerlink" href="#to-add-feature" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="suchedules">
+<h2>Suchedules<a class="headerlink" href="#suchedules" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Our developing schedule is as follow</p>
 <blockquote>
 <div><ul class="simple">
-<li>TUN/TAPを使用して既存のソフトウェアと連携できる</li>
+<li>support TUN/TAP</li>
+<li>lookup algorithm intrlerface</li>
+<li>cpupinning auto opt algorithm interface</li>
+<li>implement other queue interface for benchmark</li>
+<li>selfbench module to dcpo</li>
+<li>support xbyak</li>
+<li>routing infos lookup algorithm interface</li>
+<li>routing db interface</li>
+<li>DRCP algorithm interface</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="dynamic-cpu-pinning-optimization">
 <h2>Dynamic CPU Pinning Optimization<a class="headerlink" href="#dynamic-cpu-pinning-optimization" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Susanooは受け取るトラフィックに対してCPU割り当てを動的に最適化します。
-ポートの再設定は以下の手順で行われる.</p>
+<p>Susanow Optimize CPU Pinning Pattern and port configuration
+from Receive Traffic and processes monitor.</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li>Setting parameters</li>
@@ -170,37 +181,8 @@
 <li>Start port</li>
 </ol>
 </div></blockquote>
-<p>この手順のみ
-実効しながらユーザが明示的に指定
-パフォーマンスからSusanooが自らシステム再構成</p>
-</div>
-<div class="section" id="cpu-pinning-pattern">
-<h2>Cpu Pinning Pattern<a class="headerlink" href="#cpu-pinning-pattern" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<dl class="docutils">
-<dt>分割の粒度</dt>
-<dd><ul class="first last simple">
-<li>処理の規模が大きいほどよい影響がありそう</li>
-<li>規模が大きくないのを無理に分割するとオーバーヘッドになりそう</li>
-</ul>
-</dd>
-</dl>
-<p>→ホットスポットの粒度をあげればなんか気持ちよくなれそう</p>
-<dl class="docutils">
-<dt>処理の分割</dt>
-<dd><ul class="first last simple">
-<li>ポート分散→別ポートが安定</li>
-<li>機能分散　→別の機能が安定</li>
-<li>Flow分散  →別Flowが安定</li>
-</ul>
-</dd>
-<dt>選択のポイント</dt>
-<dd><ul class="first last simple">
-<li>どれに負担がかかるのか</li>
-<li>どれを安定させたいのか</li>
-</ul>
-</dd>
-</dl>
-<p>別NUMAノードでmalloc/freeすると遅いって噂</p>
+<p>While runnning, Susanow examine hotspot hisselves and fix that to
+change CPU Pinning.</p>
 </div>
 </div>
 

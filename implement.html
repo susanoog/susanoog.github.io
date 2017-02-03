@@ -33,7 +33,9 @@
         <link rel="index" title="索引"
               href="genindex.html"/>
         <link rel="search" title="検索" href="search.html"/>
-    <link rel="top" title="Susanow 0.0 ドキュメント" href="index.html"/> 
+    <link rel="top" title="Susanow 0.0 ドキュメント" href="index.html"/>
+        <link rel="next" title="Benchmark" href="benchmark.html"/>
+        <link rel="prev" title="Feature" href="feature.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,10 +84,21 @@
           
             
             
-                <ul>
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Motivation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Feature</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rules">Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#goal">Goal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memos">Memos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribution">Contribution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Copyrigh and Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drcp.html">Dynamic Re CPU Pinning (DRCP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
 </ul>
 
             
@@ -132,25 +145,91 @@
             
   <div class="section" id="implementation">
 <h1>Implementation<a class="headerlink" href="#implementation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="rules">
+<h2>Rules<a class="headerlink" href="#rules" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Susanow is designed to following as below-rules</p>
 <blockquote>
 <div><ul class="simple">
-<li>[]は例外を吐かない -&gt; .at(n)を使う</li>
-<li>高速イテレーションをしたいならイテレータを使う</li>
-<li>Newは極力使わない。唯一ポリモーフィズム環境でのみ使用
-それもスマートポインタにする</li>
-<li>暗黙な宣言はなくす -&gt; すべて明示的に書く -&gt; ぼくでもわかる</li>
-<li>Moveセマンティクスを使ってデータの保証を安全にする</li>
-<li>ドキュメントも同時に開発</li>
+<li>Auto Optimization CPU Pinning</li>
+<li>do not use new operator</li>
+<li>Use SmartPtr to implement Polimorfizm</li>
+<li>Implement like a Library-OS</li>
+<li>Hate implicit prototypes</li>
+<li>Move semantics is better than reference and pointer</li>
+<li>Avalable to change Design Structure</li>
+<li>Using full-power of C++11</li>
+<li>Avalable to Re-Configuration while runnning</li>
+<li>All of needed Modules to implement Router,Switch.. are included</li>
+<li>Susanow calc Benchmark themselves</li>
+<li>Use iterator to loop syntax fastly</li>
+<li>[] doesn&#8217;t throw exception, .at() throw one</li>
 </ul>
 </div></blockquote>
-<div class="section" id="id1">
-<h2>もっとも大切なこと<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To write efficient code easily, Susanow is conposed as following.</p>
+<img alt="_images/susanow-design.png" src="_images/susanow-design.png" />
+<img alt="_images/susanow-design2.png" src="_images/susanow-design2.png" />
+<img alt="_images/threadpattern.png" src="_images/threadpattern.png" />
+<p>libsusanow wraps dpdk APIs to add interfaces as following</p>
 <blockquote>
 <div><ul class="simple">
-<li>使う人は最低限度のドキュメントを見れば使用できる</li>
-<li>もし内部を知りたくなったとき、内部を簡単に理解できること</li>
+<li>throw exception</li>
+<li>constructor/destructor</li>
+<li>hide some interface that independent parameters
+and usually set as default value</li>
 </ul>
 </div></blockquote>
+<p>Susanow is one of simple example using libsusanow.
+It using simple template susanow interface, ex Port_interface class,
+Ring_interface class Txq_interace class and Rxq_interface class.
+All of each interface class has simple virtual function to process
+their purposes.  So basic Susanow can only simple processes.
+If user want Susanow to work more complex process,
+they can implement new interface class that
+inherit exist interface class. Detiled information as functiones and
+classes sepecification includes API documentation from Doxygen.
+We develop api documentation and Susanow platform at the same time.
+APIs documentation will help you.</p>
+</div>
+<div class="section" id="goal">
+<h2>Goal<a class="headerlink" href="#goal" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Efficientry Code to implement Router, Switch and more</li>
+<li>Easy to scale increase number of cores</li>
+<li>Running on Linux/x64</li>
+<li>It can try to new algorithms</li>
+<li>Next generation HPN platform</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="memos">
+<h2>Memos<a class="headerlink" href="#memos" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Many type of Graphs representing thread patters</li>
+<li>Susanow includes simple thread implementation
+user can extend these</li>
+<li>Simple Software Conponents</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="contribution">
+<h2>Contribution<a class="headerlink" href="#contribution" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>If you want to more detiled one, please see the issues and milestone
+on Github <a class="reference external" href="https://github.com/susanow/susanow">https://github.com/susanow/susanow</a></p>
+<p>If you have some ideas or opinions to enhance our system,
+please access us on twitter, github, facebook or E-mail.
+You can access us from the following information.</p>
+<blockquote>
+<div><ul class="simple">
+<li>twitter &#64;slankdev</li>
+<li>github  slankdev</li>
+<li>facebokk hirokishirokura</li>
+<li>email <a class="reference external" href="mailto:slank&#46;dev&#37;&#52;&#48;gmail&#46;com">slank<span>&#46;</span>dev<span>&#64;</span>gmail<span>&#46;</span>com</a></li>
+</ul>
+</div></blockquote>
+<p>if you are little compassionate, please tell us that you saw our GithubPages.
+because there are many emails (most of spam) coming mu emailbox.</p>
 </div>
 </div>
 
@@ -158,6 +237,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="benchmark.html" class="btn btn-neutral float-right" title="Benchmark" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="feature.html" class="btn btn-neutral" title="Feature" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

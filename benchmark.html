@@ -35,7 +35,7 @@
         <link rel="search" title="検索" href="search.html"/>
     <link rel="top" title="Susanow 0.0 ドキュメント" href="index.html"/>
         <link rel="next" title="Copyrigh and Licence" href="license.html"/>
-        <link rel="prev" title="Feature" href="feature.html"/> 
+        <link rel="prev" title="Implementation" href="implement.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -85,9 +85,19 @@
             
             
                 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Motivation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Feature</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implement.html">Implementation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Benchmark</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#environment">Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spec">Spec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eveluation-point">Eveluation Point</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Copyrigh and Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drcp.html">Dynamic Re CPU Pinning (DRCP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
 </ul>
 
             
@@ -139,7 +149,7 @@
 <li><dl class="first docutils">
 <dt>CPU Test</dt>
 <dd><ul class="first last">
-<li>null_pmdを使用してCPUの限界を測る</li>
+<li>using null_pmd. calc CPU limit</li>
 </ul>
 </dd>
 </dl>
@@ -147,8 +157,16 @@
 <li><dl class="first docutils">
 <dt>Traffic Test</dt>
 <dd><ul class="first last">
-<li>実際にトラフィックジェネレータを使用して実測値を測る</li>
-<li>Pktegen-DPDKを使用</li>
+<li>using Traffic-Generator to calc Ovserver Value</li>
+<li><dl class="first docutils">
+<dt>Traffic-generator</dt>
+<dd><ul class="first last">
+<li>Pktegen-DPDK</li>
+<li>Spirent</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
@@ -164,6 +182,56 @@
 </li>
 </ul>
 </div></blockquote>
+<div class="section" id="environment">
+<h2>Environment<a class="headerlink" href="#environment" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="_images/bench.png" src="_images/bench.png" />
+</div>
+<div class="section" id="spec">
+<h2>Spec<a class="headerlink" href="#spec" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>CPU</dt>
+<dd><ul class="first last">
+<li>Core i7</li>
+<li>Xeon E5 1 socket</li>
+<li>Xeon E5 2 socket</li>
+<li>Xeon Phi</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>NIC</dt>
+<dd><ul class="first last">
+<li>Intel X540</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Tester</dt>
+<dd><ul class="first last">
+<li>Pktgen-DPDK</li>
+<li>Spirent</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="eveluation-point">
+<h2>Eveluation Point<a class="headerlink" href="#eveluation-point" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>throughput</li>
+<li>latency</li>
+<li>jitter</li>
+<li>power consumption</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -176,7 +244,7 @@
         <a href="license.html" class="btn btn-neutral float-right" title="Copyrigh and Licence" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="feature.html" class="btn btn-neutral" title="Feature" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="implement.html" class="btn btn-neutral" title="Implementation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

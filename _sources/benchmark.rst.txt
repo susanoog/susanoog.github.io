@@ -2,14 +2,44 @@
 Benchmark
 =========
 
-
  - CPU Test
-     - null_pmdを使用してCPUの限界を測る
+     - using null_pmd. calc CPU limit
  - Traffic Test
-     - 実際にトラフィックジェネレータを使用して実測値を測る
-     - Pktegen-DPDKを使用
+     - using Traffic-Generator to calc Ovserver Value
+     - Traffic-generator
+        - Pktegen-DPDK
+        - Spirent
  - Envs (not tested)
      - PC/WS (Core i7, Xeon E5, Xeon Phi)
      - Tester Pktgen-DPDK, Spirent
+
+Environment
+^^^^^^^^^^^
+
+.. image:: ./img/bench.png
+
+Spec
+^^^^^
+
+ - CPU
+     - Core i7
+     - Xeon E5 1 socket
+     - Xeon E5 2 socket
+     - Xeon Phi
+ - NIC
+     - Intel X540
+ - Tester
+     - Pktgen-DPDK
+     - Spirent
+
+
+
+Eveluation Point
+^^^^^^^^^^^^^^^^
+
+ - throughput
+ - latency
+ - jitter
+ - power consumption
 
 

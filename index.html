@@ -89,6 +89,9 @@
 <li class="toctree-l1"><a class="reference internal" href="implement.html">Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Copyrigh and Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drcp.html">Dynamic Re CPU Pinning (DRCP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
 </ul>
 
             
@@ -135,35 +138,37 @@
             
   <div class="section" id="susanow">
 <h1>Susanow<a class="headerlink" href="#susanow" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Susanowは次世代高性能ネットワーキングを支える基盤プラットフォームです。
-DPDKをバックエンドとし、チューニングレスな通信基盤を提供します。</p>
-<p>Susanow(正式なスペルはSusanoo/漢字:素戔嗚)は日本古来のわがままな神です。
-ライバルがKamuee0というソフトウェアルータなので同じく日本の神様の名前を
-いただきました。</p>
-<p>詳しくは <a class="reference internal" href="introduction.html"><span class="doc">Introduction and Motivation</span></a> を参照ください</p>
+<p>Susanow is a next generation platform to perform High Performance Networking.
+Its backend is DPDK, provides Tuning-less platform.</p>
+<p>Susanow (須佐之男 (スサノオ)?, romanized as Susano-o, Susa-no-O, Susano&#8217;o,
+and Susanowo), also known as Takehaya Susanoo-no-Mikoto (建速須佐之男命?)
+and Kumano Ketsumiko no kami at Kumano shrine,
+is the Shinto god of the sea and storms.
+He is also considered to be ruler of Neno-Katasu-Kuni
+(now in Yasugi-shi, Shimane-ken). He is married to Kushinadahime.</p>
+<p>Why we named this platform, Susanow is influenced by Kamuee0 that is
+a high speed software router developed by Head of Technology Development team
+in NTT-Comunications.</p>
+<p>More detail, please see <a class="reference internal" href="introduction.html"><span class="doc">Introduction and Motivation</span></a> .</p>
 <div class="section" id="concept-implementation">
 <h2>Concept/Implementation<a class="headerlink" href="#concept-implementation" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>チューニングレス -&gt; 起動環境に対して最適に自己チューニング</li>
-<li>実装ミスの起こらない実装 -&gt; 拡張者にもそれを束縛したい</li>
-<li>128Byteでワイヤーレート</li>
-<li>すでに実装されたクラスを拡張することができる</li>
-<li>C++11の恩恵をフルに使用 (MoveSmantics/SmartPtr)</li>
-<li>HPNのソフト開発に必要な機能を多く含む</li>
-<li>ShellなどのUtil的なインターフェースも持つ</li>
+<li>Tuning-Less</li>
+<li>Safe Implementation</li>
+<li>Wirerate (128byte packet)</li>
+<li>Extensible</li>
+<li>Using useful components on C++11 (move semantics/smart ptr)</li>
+<li>All module are included that are needed HighPerformanceNetworking</li>
 </ul>
 </div></blockquote>
-<p>詳しくは <a class="reference internal" href="feature.html"><span class="doc">Feature</span></a> を参照ください</p>
-<p>SusanowはC++11/DPDK/Linuxで動作をするプラットフォームです。
-高性能に動くだけでなく、美しい設計にしていくのも目標です。
-詳しい実装に関しては <a class="reference internal" href="implement.html"><span class="doc">Implementation</span></a> を参照してください。</p>
+<p>More detail, please see <a class="reference internal" href="feature.html"><span class="doc">Feature</span></a> .
+If you want to know implementation or extend susanow, please see <a class="reference internal" href="implement.html"><span class="doc">Implementation</span></a> .</p>
 </div>
 <div class="section" id="benchmark">
 <h2>Benchmark<a class="headerlink" href="#benchmark" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PC/Workstationを使用してSusanowのパフォーマンスの計測を行います。
-現在は10GbEをサポートしています。
-詳しくは <a class="reference internal" href="benchmark.html"><span class="doc">Benchmark</span></a> を参照ください</p>
+<p>We calc benchmark on PC/Workstation. Now, Susanow support 10GbE.
+More detail, please see <a class="reference internal" href="benchmark.html"><span class="doc">Benchmark</span></a> .</p>
 </div>
 <div class="section" id="documentation-contens">
 <h2>Documentation Contens<a class="headerlink" href="#documentation-contens" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -175,6 +180,9 @@ DPDKをバックエンドとし、チューニングレスな通信基盤を提�
 <li class="toctree-l1"><a class="reference internal" href="implement.html">Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Copyrigh and Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drcp.html">Dynamic Re CPU Pinning (DRCP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
 </ul>
 </div>
 </div>
