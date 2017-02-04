@@ -1,0 +1,9 @@
+<map id="/home/slank/git/susanow/susanow/src/lib/include/ssnlib_log.h" name="/home/slank/git/susanow/susanow/src/lib/include/ssnlib_log.h">
+<area shape="rect" id="node2" href="$ssnlib__cpu_8h.html" title="muluticore library " alt="" coords="5,213,196,269"/>
+<area shape="rect" id="node6" href="$ssnlib__misc_8h.html" title="include misc function " alt="" coords="139,109,329,165"/>
+<area shape="rect" id="node7" href="$ssnlib__port_8h.html" title="port management library " alt="" coords="272,213,463,269"/>
+<area shape="rect" id="node8" href="$ssnlib__ring_8h.html" title="wrap rte_ring.h " alt="" coords="405,109,596,165"/>
+<area shape="rect" id="node3" href="$ssnlib__sys_8h.html" title="susanow lib top header " alt="" coords="139,317,329,373"/>
+<area shape="rect" id="node4" href="$commands_8h_source.html" title="/home/slank/git/susanow\l/susanow/src/commands.h" alt="" coords="37,429,220,470"/>
+<area shape="rect" id="node5" href="$ssnlib__shell_8h.html" title="include shell implementation " alt="" coords="244,421,435,477"/>
+</map>
