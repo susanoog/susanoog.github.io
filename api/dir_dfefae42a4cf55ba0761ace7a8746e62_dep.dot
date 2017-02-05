@@ -1,0 +1,10 @@
+digraph "/home/slank/git/susanow" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_dfefae42a4cf55ba0761ace7a8746e62 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_dfefae42a4cf55ba0761ace7a8746e62.html"];
+    dir_dfefae42a4cf55ba0761ace7a8746e62 [shape=plaintext label="susanow"];
+    dir_42e714e673a008e3ed298e7cd0c41ee8 [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_42e714e673a008e3ed298e7cd0c41ee8.html"];
+  }
+}

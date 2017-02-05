@@ -1,0 +1,14 @@
+digraph "ssnlib::ssn_thread"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{ssnlib::ssn_thread\n||+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{ssnlib::Shell\n|- cmds\l|+ help()\l+ kill()\l+ add_cmd()\l+ exe_cmd()\l+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1Shell.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{ssnt_rx\n|- sys\l- running\l|+ ssnt_rx()\l+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnt__rx.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{ssnt_tx\n|- sys\l- running\l|+ ssnt_tx()\l+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnt__tx.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{ssnt_wk\n|- sys\l- running\l- nb_delay_clk\l|+ ssnt_wk()\l+ ssnt_wk()\l+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnt__wk.html"];
+}

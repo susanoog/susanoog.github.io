@@ -1,0 +1,18 @@
+digraph "ssnlib::Port_interface&lt; RXQ, TXQ &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{ssnlib::Port_interface\l\< RXQ, TXQ \>\n|+ id\l+ name\l+ rxq\l+ txq\l+ nb_rx_rings\l+ nb_tx_rings\l+ rx_ring_size\l+ tx_ring_size\l|+ Port_interface()\l+ boot()\l+ linkup()\l+ linkdown()\l+ start()\l+ stop()\l+ promiscuous_set()\l+ is_promiscuous()\l+ configure()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +info" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{ssnlib::dev_info\n|+ id\l+ raw\l|+ dev_info()\l+ get()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1dev__info.html"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +stats" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{ssnlib::port_stats\n|+ id\l+ raw\l|+ port_stats()\l+ reset()\l+ update()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1port__stats.html"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +addr" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{ssnlib::ether_addr\n|+ id\l|+ ether_addr()\l+ print()\l+ toString()\l+ update()\l+ set()\l+ add()\l+ del()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1ether__addr.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{ether_addr\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +conf" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{ssnlib::port_conf\n|+ id\l+ raw\l|+ port_conf()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1port__conf.html"];
+  Node7 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +link" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{ssnlib::link_stats\n|+ id\l+ raw\l|+ link_stats()\l+ update()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1link__stats.html"];
+}
