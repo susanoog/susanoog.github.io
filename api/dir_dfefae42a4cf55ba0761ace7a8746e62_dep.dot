@@ -9,6 +9,6 @@ digraph "/home/slank/git/susanow" {
     dir_caa186dbe80251dce76ca8435da2090d [shape=box label="lib" color="red" fillcolor="white" style="filled" URL="dir_caa186dbe80251dce76ca8435da2090d.html"];
     dir_f2b090c2b49f4ffdca270af3d7dd55ea [shape=box label="test" color="black" fillcolor="white" style="filled" URL="dir_f2b090c2b49f4ffdca270af3d7dd55ea.html"];
   }
-  dir_f2b090c2b49f4ffdca270af3d7dd55ea->dir_caa186dbe80251dce76ca8435da2090d [headlabel="5", labeldistance=1.5 headhref="dir_000003_000004.html"];
+  dir_f2b090c2b49f4ffdca270af3d7dd55ea->dir_caa186dbe80251dce76ca8435da2090d [headlabel="9", labeldistance=1.5 headhref="dir_000003_000004.html"];
   dir_f009b5e3b270b0005960285e6ed0cff0->dir_caa186dbe80251dce76ca8435da2090d [headlabel="1", labeldistance=1.5 headhref="dir_000001_000004.html"];
 }

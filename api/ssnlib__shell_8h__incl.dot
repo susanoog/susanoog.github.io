@@ -114,9 +114,11 @@ digraph "/home/slank/git/susanow/lib/include/ssnlib_shell.h"
   Node35 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node41 [label="ssnlib_port_impl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__port__impl_8h.html",tooltip="include classes that provide port-infomation "];
   Node41 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node42 [label="ssnlib_misc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__misc_8h.html",tooltip="include misc function "];
-  Node42 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="slankdev/system.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="ssnlib_misc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__misc_8h.html",tooltip="include misc function "];
+  Node43 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

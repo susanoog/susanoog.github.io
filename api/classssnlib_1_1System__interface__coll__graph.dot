@@ -2,5 +2,5 @@ digraph "ssnlib::System_interface&lt; CPU, PORT &gt;"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{ssnlib::System_interface\l\< CPU, PORT \>\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="{ssnlib::System_interface\l\< CPU, PORT \>\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l+ launch_all()\l+ append_thread()\l+ cyclic_task()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
 }

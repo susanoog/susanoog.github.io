@@ -13,10 +13,12 @@ digraph "/home/slank/git/susanow/lib/include/ssnlib_mempool.h"
   Node5 [label="/home/slank/git/susanow\l/lib/include/ssnlib_shell.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__shell_8h.html",tooltip="include shell implementation "];
   Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="/home/slank/git/susanow\l/test/commands.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$commands_8h_source.html"];
-  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="/home/slank/git/susanow\l/lib/include/ssnlib_port.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__port_8h.html",tooltip="port management library "];
-  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="/home/slank/git/susanow\l/test/timers.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$timers_8h_source.html"];
   Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="/home/slank/git/susanow\l/lib/include/ssnlib_ring.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__ring_8h.html",tooltip="wrap rte_ring.h "];
-  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="/home/slank/git/susanow\l/lib/include/ssnlib_port.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__port_8h.html",tooltip="port management library "];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="/home/slank/git/susanow\l/lib/include/ssnlib_ring.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssnlib__ring_8h.html",tooltip="wrap rte_ring.h "];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

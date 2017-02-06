@@ -92,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Extend Susanow</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#rules">Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-new-queue">Add New Queue</a></li>
 </ul>
 </li>
 </ul>
@@ -147,6 +148,67 @@
 <li>don&#8217;t use [] operator, use .at().</li>
 </ul>
 </div></blockquote>
+</div>
+<div class="section" id="add-new-queue">
+<h2>Add New Queue<a class="headerlink" href="#add-new-queue" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>You can add and select original Queue implementaion. The all tasks are following below.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Define OriginalQueue class inherrit Ring_interface class.</li>
+<li>Implement all pure virtual functions.</li>
+<li>Using OriginalQueue class at Template specialization.</li>
+</ul>
+</div></blockquote>
+<p>Example: Ring_stdqueue is good sample to add new queue class. on susanow/lib/include/ssnlib_ring.h</p>
+<p>At first, define and implement originalclass ad Ring_stdqueue. it uses std::queue class.
+It is thread unsafe so we must be exclusive with std::mutex.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Ring_stdqueue</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Ring_interface</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="n">rte_mbuf</span><span class="o">*&gt;</span> <span class="n">queue_</span><span class="p">;</span>
+    <span class="k">mutable</span> <span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">*</span> <span class="n">m</span><span class="p">;</span>
+    <span class="k">using</span> <span class="n">auto_lock</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">Ring_stdqueue</span><span class="p">(</span><span class="kt">size_t</span><span class="p">,</span> <span class="kt">size_t</span><span class="p">,</span> <span class="kt">size_t</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="p">{</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">virtual</span> <span class="o">~</span><span class="n">Ring_stdqueue</span><span class="p">()</span> <span class="p">{</span> <span class="k">delete</span><span class="p">(</span><span class="n">m</span><span class="p">);</span> <span class="p">}</span>
+    <span class="n">Ring_stdqueue</span><span class="p">(</span><span class="k">const</span> <span class="n">Ring_stdqueue</span><span class="o">&amp;</span><span class="p">)</span> <span class="p">{</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">Ring_stdqueue</span><span class="p">(</span><span class="n">Ring_stdqueue</span><span class="o">&amp;&amp;</span><span class="p">)</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">push_bulk</span><span class="p">(</span><span class="n">rte_mbuf</span><span class="o">**</span> <span class="n">obj_table</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">)</span> <span class="k">override</span>
+    <span class="p">{</span>
+        <span class="n">auto_lock</span> <span class="n">lg</span><span class="p">(</span><span class="o">*</span><span class="n">m</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">queue_</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">obj_table</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">pop_bulk</span><span class="p">(</span><span class="n">rte_mbuf</span><span class="o">**</span> <span class="n">obj_table</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">n</span><span class="p">)</span> <span class="k">override</span>
+    <span class="p">{</span>
+        <span class="n">auto_lock</span> <span class="n">lg</span><span class="p">(</span><span class="o">*</span><span class="n">m</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">queue_</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">obj_table</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">queue_</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+            <span class="n">queue_</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">size_t</span> <span class="nf">count</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="n">auto_lock</span> <span class="n">lg</span><span class="p">(</span><span class="o">*</span><span class="n">m</span><span class="p">);</span> <span class="k">return</span> <span class="n">queue_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">}</span>
+    <span class="kt">size_t</span> <span class="nf">size</span><span class="p">()</span>  <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="n">auto_lock</span> <span class="n">lg</span><span class="p">(</span><span class="o">*</span><span class="n">m</span><span class="p">);</span> <span class="k">return</span> <span class="n">queue_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">}</span>
+    <span class="kt">bool</span>   <span class="nf">empty</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="n">auto_lock</span> <span class="n">lg</span><span class="p">(</span><span class="o">*</span><span class="n">m</span><span class="p">);</span> <span class="k">return</span> <span class="n">queue_</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Code is enough. Finaly, specialize template.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="k">using</span> <span class="n">Rxq</span>    <span class="o">=</span> <span class="n">ssnlib</span><span class="o">::</span><span class="n">Rxq_interface</span><span class="o">&lt;</span><span class="n">ssnlib</span><span class="o">::</span><span class="n">Ring_dpdk</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">Txq</span>    <span class="o">=</span> <span class="n">ssnlib</span><span class="o">::</span><span class="n">Txq_interface</span><span class="o">&lt;</span><span class="n">ssnlib</span><span class="o">::</span><span class="n">Ring_dpdk</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">Port</span>   <span class="o">=</span> <span class="n">ssnlib</span><span class="o">::</span><span class="n">Port_interface</span><span class="o">&lt;</span><span class="n">Rxq</span><span class="p">,</span> <span class="n">Txq</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">Cpu</span>    <span class="o">=</span> <span class="n">ssnlib</span><span class="o">::</span><span class="n">Cpu_interface</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">System</span> <span class="o">=</span> <span class="n">ssnlib</span><span class="o">::</span><span class="n">System_interface</span><span class="o">&lt;</span><span class="n">Cpu</span><span class="p">,</span> <span class="n">Port</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="n">System</span> <span class="nf">sys</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This sample implementation uses std::queue and std::mutex, so it&#8217;s slower than Ring_dpdk,
+default Ring_interface implementation.
+If you want add/test new queue algorithm/implementation, following these to add new class.</p>
 </div>
 </div>
 

@@ -6,7 +6,7 @@ digraph "ssnlib::Port_interface&lt; RXQ, TXQ &gt;"
   Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +info" ,arrowhead="odiamond",fontname="Helvetica"];
   Node2 [label="{ssnlib::dev_info\n|+ id\l+ raw\l|+ dev_info()\l+ get()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1dev__info.html"];
   Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +stats" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node3 [label="{ssnlib::port_stats\n|+ id\l+ raw\l|+ port_stats()\l+ reset()\l+ update()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1port__stats.html"];
+  Node3 [label="{ssnlib::port_stats\n|+ id\l+ rx_pps\l+ tx_pps\l+ rx_bps\l+ tx_bps\l+ last_update\l+ init\l+ cure_prev\l+ cure\l- IFG\l- PAM\l- FCS\l- IFO\l|+ port_stats()\l+ reset()\l+ update()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1port__stats.html"];
   Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +addr" ,arrowhead="odiamond",fontname="Helvetica"];
   Node4 [label="{ssnlib::ether_addr\n|+ id\l|+ ether_addr()\l+ print()\l+ toString()\l+ update()\l+ set()\l+ add()\l+ del()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1ether__addr.html"];
   Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];

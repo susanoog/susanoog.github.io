@@ -2,5 +2,5 @@ digraph "ssnlib::port_stats"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{ssnlib::port_stats\n|+ id\l+ raw\l|+ port_stats()\l+ reset()\l+ update()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="{ssnlib::port_stats\n|+ id\l+ rx_pps\l+ tx_pps\l+ rx_bps\l+ tx_bps\l+ last_update\l+ init\l+ cure_prev\l+ cure\l- IFG\l- PAM\l- FCS\l- IFO\l|+ port_stats()\l+ reset()\l+ update()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
 }

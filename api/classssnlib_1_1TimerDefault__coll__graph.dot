@@ -1,0 +1,12 @@
+digraph "ssnlib::TimerDefault"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{ssnlib::TimerDefault\n||+ TimerDefault()\l+ ~TimerDefault()\l+ func()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{ssnlib::Timer\n||+ Timer()\l+ ~Timer()\l+ func()\l+ doo()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structssnlib_1_1Timer.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{rte_timer\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -sys" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{ssnlib::System_interface\l\< CPU, PORT \>\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l+ launch_all()\l+ append_thread()\l+ cyclic_task()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1System__interface.html"];
+}

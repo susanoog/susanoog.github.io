@@ -10,5 +10,5 @@ digraph "Cmd_run"
   Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node4 [label="{ssnlib::ssn_thread\n||+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1ssn__thread.html"];
   Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -sys" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node5 [label="{ssnlib::System_interface\l\< CPU, PORT \>\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1System__interface.html"];
+  Node5 [label="{ssnlib::System_interface\l\< CPU, PORT \>\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l+ launch_all()\l+ append_thread()\l+ cyclic_task()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1System__interface.html"];
 }
