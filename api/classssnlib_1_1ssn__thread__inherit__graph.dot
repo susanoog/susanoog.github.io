@@ -2,9 +2,9 @@ digraph "ssnlib::ssn_thread"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{ssnlib::ssn_thread\n||+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="{ssnlib::ssn_thread\n|+ name\l|+ ssn_thread()\l+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{ssnlib::Shell\n|- cmds\l|+ help()\l+ kill()\l+ add_cmd()\l+ exe_cmd()\l+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1Shell.html"];
+  Node2 [label="{ssnlib::Shell\n|+ ctx_cmdline_\l+ p\l+ cmds\l+ ctx\l|+ Shell()\l+ ~Shell()\l+ add_cmd()\l+ fin()\l+ interact()\l+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structssnlib_1_1Shell.html"];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node3 [label="{ssnlib::Timersubsys\n|- lcore_id\l- timers\l|+ Timersubsys()\l+ ~Timersubsys()\l+ init()\l+ add_timer()\l+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1Timersubsys.html"];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];

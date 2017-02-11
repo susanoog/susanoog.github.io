@@ -4,5 +4,5 @@ digraph "ssnlib::Timersubsys"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="{ssnlib::Timersubsys\n|- lcore_id\l- timers\l|+ Timersubsys()\l+ ~Timersubsys()\l+ init()\l+ add_timer()\l+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{ssnlib::ssn_thread\n||+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1ssn__thread.html"];
+  Node2 [label="{ssnlib::ssn_thread\n|+ name\l|+ ssn_thread()\l+ operator()()\l+ kill()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1ssn__thread.html"];
 }

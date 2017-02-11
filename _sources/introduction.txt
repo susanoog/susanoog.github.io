@@ -72,7 +72,8 @@ Keywords
 ^^^^^^^^
 High Performance/Network/Packet/DPDK/Reconfigurable
 /JIT/Assembler/C++11/Multi Core/Many Core/Multi Thread
-/Tuning Less/
+/Tuning Less/Low latency/SW Optimization/Multiqueue NIC
+/Soft Router/Soft Switch/Scalable
 
 
 

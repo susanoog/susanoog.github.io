@@ -2,7 +2,7 @@ var searchData=
 [
   ['susanow',['Susanow',['../md__home_slank_git_susanow_README.html',1,'']]],
   ['section',['Section',['../structssnlib_1_1Section.html',1,'ssnlib']]],
-  ['shell',['Shell',['../classssnlib_1_1Shell.html',1,'ssnlib']]],
+  ['shell',['Shell',['../structssnlib_1_1Shell.html',1,'ssnlib']]],
   ['ssn_5fthread',['ssn_thread',['../classssnlib_1_1ssn__thread.html',1,'ssnlib']]],
   ['ssnlib_5fcfg_2eh',['ssnlib_cfg.h',['../ssnlib__cfg_8h.html',1,'']]],
   ['ssnlib_5fcmd_2eh',['ssnlib_cmd.h',['../ssnlib__cmd_8h.html',1,'']]],

@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="ssnlib::Section",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structssnlib_1_1Section.html"];
+  Node1 [label="ssnlib::link_stats",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classssnlib_1_1link__stats.html"];
 }
