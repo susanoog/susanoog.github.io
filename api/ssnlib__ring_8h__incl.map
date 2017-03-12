@@ -1,4 +1,4 @@
-<map id="/home/slank/git/susanow/susanow/src/lib/include/ssnlib_ring.h" name="/home/slank/git/susanow/susanow/src/lib/include/ssnlib_ring.h">
-<area shape="rect" id="node2" href="$ssnlib__log_8h.html" title="include logger class " alt="" coords="413,109,519,136"/>
-<area shape="rect" id="node4" href="$ssnlib__mempool_8h.html" title="wrap rte_mempool.h " alt="" coords="909,109,1044,136"/>
+<map id="/home/slank/git/susanow/lib/include/ssnlib_ring.h" name="/home/slank/git/susanow/lib/include/ssnlib_ring.h">
+<area shape="rect" id="node2" href="$ssnlib__log_8h.html" title="include logger class " alt="" coords="413,95,519,121"/>
+<area shape="rect" id="node4" href="$ssnlib__mempool_8h.html" title="wrap rte_mempool.h " alt="" coords="909,95,1044,121"/>
 </map>

@@ -1,5 +1,10 @@
-<map id="/home/slank/git/susanow/susanow/src/lib/include/ssnlib_cpu.h" name="/home/slank/git/susanow/susanow/src/lib/include/ssnlib_cpu.h">
-<area shape="rect" id="node2" href="$ssnlib__sys_8h.html" title="susanow lib top header " alt="" coords="107,109,297,165"/>
-<area shape="rect" id="node3" href="$commands_8h_source.html" title="/home/slank/git/susanow\l/susanow/src/commands.h" alt="" coords="5,221,188,262"/>
-<area shape="rect" id="node4" href="$ssnlib__shell_8h.html" title="include shell implementation " alt="" coords="212,213,403,269"/>
+<map id="/home/slank/git/susanow/lib/include/ssnlib_cpu.h" name="/home/slank/git/susanow/lib/include/ssnlib_cpu.h">
+<area shape="rect" id="node2" href="$ssnlib__sys_8h.html" title="susanow lib top header " alt="" coords="681,95,879,136"/>
+<area shape="rect" id="node3" href="$example_2cmdline_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/cmdline/commands.h" alt="" coords="5,191,216,233"/>
+<area shape="rect" id="node4" href="$example_2dta2_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/dta2/commands.h" alt="" coords="241,191,431,233"/>
+<area shape="rect" id="node5" href="$example_2l2fwd_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/l2fwd/commands.h" alt="" coords="456,191,653,233"/>
+<area shape="rect" id="node6" href="$example_2l2fwd__multithread_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/l2fwd_multithread\l/commands.h" alt="" coords="678,184,882,240"/>
+<area shape="rect" id="node7" href="$ssnlib__default_8h_source.html" title="/home/slank/git/susanow\l/lib/include/ssnlib_default.h" alt="" coords="906,191,1131,233"/>
+<area shape="rect" id="node8" href="$ssnlib__shell_8h.html" title="include shell implementation " alt="" coords="1155,191,1365,233"/>
+<area shape="rect" id="node9" href="$test_2commands_8h_source.html" title="/home/slank/git/susanow\l/test/commands.h" alt="" coords="1390,191,1573,233"/>
 </map>

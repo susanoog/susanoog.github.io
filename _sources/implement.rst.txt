@@ -7,7 +7,6 @@ Rules
 Susanow is designed to following as below-rules
 
  - Auto Optimization CPU Pinning
- - do not use new operator
  - Use SmartPtr to implement Polimorfizm
  - Implement like a Library-OS
  - Hate implicit prototypes
@@ -18,7 +17,12 @@ Susanow is designed to following as below-rules
  - All of needed Modules to implement Router,Switch.. are included
  - Susanow calc Benchmark themselves
  - Use iterator to loop syntax fastly
- - [] doesn't throw exception, .at() throw one
+ - don't use [] operator, use .at().
+
+The [] operator doesn't throw exception if specific range error index.
+The .at() function throw exception if that, but it is a little slow.
+User have to use .at() when random accsess and iterator when fast iteration.
+
 
 To write efficient code easily, Susanow is conposed as following.
 

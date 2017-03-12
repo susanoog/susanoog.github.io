@@ -37,7 +37,8 @@ Concept/Implementation
  - All module are included that are needed HighPerformanceNetworking
 
 More detail, please see :doc:`feature` .
-If you want to know implementation or extend susanow, please see :doc:`implement` .
+If you want to know implementation susanow, please see :doc:`implement` .
+If you want to extend susanow, please see :doc:`extend` .
 
 
 
@@ -63,12 +64,15 @@ Documentation Contens
 
   introduction.rst
   feature.rst
+  howtouse.rst
   implement.rst
   benchmark.rst
   license.rst
   drcp.rst
   glossary.rst
   usecase.rst
+  apidoc.rst
+  extend.rst
 
 
 

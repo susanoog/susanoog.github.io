@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classssnlib_1_1port__stats-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ssnlib::port_stats Class Reference</div>  </div>
@@ -93,12 +94,48 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ace8e71ee21bc384a90fde732ee757f64"><td class="memItemLeft" align="right" valign="top"><a id="ace8e71ee21bc384a90fde732ee757f64"></a>
 const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
 <tr class="separator:ace8e71ee21bc384a90fde732ee757f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2743f8b561328ebcb49eaf8bc37c88d7"><td class="memItemLeft" align="right" valign="top"><a id="a2743f8b561328ebcb49eaf8bc37c88d7"></a>
-struct rte_eth_stats&#160;</td><td class="memItemRight" valign="bottom"><b>raw</b></td></tr>
-<tr class="separator:a2743f8b561328ebcb49eaf8bc37c88d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946ed947b620433457c1c3b76092053f"><td class="memItemLeft" align="right" valign="top"><a id="a946ed947b620433457c1c3b76092053f"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>rx_pps</b></td></tr>
+<tr class="separator:a946ed947b620433457c1c3b76092053f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e4b285dfdbb30345a1589f8b5d8a69"><td class="memItemLeft" align="right" valign="top"><a id="a01e4b285dfdbb30345a1589f8b5d8a69"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_pps</b></td></tr>
+<tr class="separator:a01e4b285dfdbb30345a1589f8b5d8a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc41c102d8baed1dfa35ec7ca510b92"><td class="memItemLeft" align="right" valign="top"><a id="a2bc41c102d8baed1dfa35ec7ca510b92"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>rx_bps</b></td></tr>
+<tr class="separator:a2bc41c102d8baed1dfa35ec7ca510b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19166563396dc0cb3948829f5a6b3aec"><td class="memItemLeft" align="right" valign="top"><a id="a19166563396dc0cb3948829f5a6b3aec"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_bps</b></td></tr>
+<tr class="separator:a19166563396dc0cb3948829f5a6b3aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a820170f3757b404256e4210a8ce3689e"><td class="memItemLeft" align="right" valign="top"><a id="a820170f3757b404256e4210a8ce3689e"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>last_update</b></td></tr>
+<tr class="separator:a820170f3757b404256e4210a8ce3689e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc7ffedd5067a829d62fa7725def8c3"><td class="memItemLeft" align="right" valign="top"><a id="a4fc7ffedd5067a829d62fa7725def8c3"></a>
+struct rte_eth_stats&#160;</td><td class="memItemRight" valign="bottom"><b>init</b></td></tr>
+<tr class="separator:a4fc7ffedd5067a829d62fa7725def8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a45823013039554066affe4abbb051e"><td class="memItemLeft" align="right" valign="top"><a id="a4a45823013039554066affe4abbb051e"></a>
+struct rte_eth_stats&#160;</td><td class="memItemRight" valign="bottom"><b>cure_prev</b></td></tr>
+<tr class="separator:a4a45823013039554066affe4abbb051e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a99bf90786ff1a23bcc8d13c9cdab4"><td class="memItemLeft" align="right" valign="top"><a id="ad2a99bf90786ff1a23bcc8d13c9cdab4"></a>
+struct rte_eth_stats&#160;</td><td class="memItemRight" valign="bottom"><b>cure</b></td></tr>
+<tr class="separator:ad2a99bf90786ff1a23bcc8d13c9cdab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a276aa84fd81544ff280fb0e50b3a7b6f"><td class="memItemLeft" align="right" valign="top"><a id="a276aa84fd81544ff280fb0e50b3a7b6f"></a>
+static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>IFG</b> = 12</td></tr>
+<tr class="separator:a276aa84fd81544ff280fb0e50b3a7b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01077edb75592833cd25ee1020fa0e0"><td class="memItemLeft" align="right" valign="top"><a id="af01077edb75592833cd25ee1020fa0e0"></a>
+static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>PAM</b> = 8</td></tr>
+<tr class="separator:af01077edb75592833cd25ee1020fa0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab507f0c5b4b506bfc555199f20894707"><td class="memItemLeft" align="right" valign="top"><a id="ab507f0c5b4b506bfc555199f20894707"></a>
+static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>FCS</b> = 4</td></tr>
+<tr class="separator:ab507f0c5b4b506bfc555199f20894707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbec27f6b1321a8b8570b29cf7309840"><td class="memItemLeft" align="right" valign="top"><a id="abbec27f6b1321a8b8570b29cf7309840"></a>
+static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>IFO</b> = IFG+PAM+FCS</td></tr>
+<tr class="separator:abbec27f6b1321a8b8570b29cf7309840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/slank/git/susanow/susanow/src/lib/include/<a class="el" href="ssnlib__port__impl_8h_source.html">ssnlib_port_impl.h</a></li>
+<li>/home/slank/git/susanow/lib/include/<a class="el" href="ssnlib__port__impl_8h_source.html">ssnlib_port_impl.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

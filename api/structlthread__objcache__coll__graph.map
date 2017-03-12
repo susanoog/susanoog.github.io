@@ -1,0 +1,5 @@
+<map id="lthread_objcache" name="lthread_objcache">
+<area shape="rect" id="node2" href="$structlthread__queue.html" title="{lthread_queue\n|+ name\l|+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l}" alt="" coords="5,226,175,333"/>
+<area shape="rect" id="node3" href="$structqnode.html" title="{qnode\n|+ data\l|}" alt="" coords="230,5,294,83"/>
+<area shape="rect" id="node4" href="$structqnode__pool.html" title="{qnode_pool\n|+ pre_alloc\l+ name\l|+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l}" alt="" coords="268,204,437,355"/>
+</map>

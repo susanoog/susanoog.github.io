@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classssnlib_1_1Ring__stdqueue-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -86,6 +87,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0bba172b08d43c587d5c4de90daaa66c"><td class="memItemLeft" align="right" valign="top"><a id="a0bba172b08d43c587d5c4de90daaa66c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Ring_stdqueue</b> (size_t, size_t, size_t, const char *)</td></tr>
 <tr class="separator:a0bba172b08d43c587d5c4de90daaa66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19648f1f66cbea8eec111d1f97ae936"><td class="memItemLeft" align="right" valign="top"><a id="ab19648f1f66cbea8eec111d1f97ae936"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Ring_stdqueue</b> (const <a class="el" href="classssnlib_1_1Ring__stdqueue.html">Ring_stdqueue</a> &amp;)</td></tr>
+<tr class="separator:ab19648f1f66cbea8eec111d1f97ae936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1cb46b8abf5ebe58afc1523b0e28a34"><td class="memItemLeft" align="right" valign="top"><a id="af1cb46b8abf5ebe58afc1523b0e28a34"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Ring_stdqueue</b> (<a class="el" href="classssnlib_1_1Ring__stdqueue.html">Ring_stdqueue</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:af1cb46b8abf5ebe58afc1523b0e28a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81b01385564bf086deb9a2ea62836815"><td class="memItemLeft" align="right" valign="top"><a id="a81b01385564bf086deb9a2ea62836815"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_bulk</b> (rte_mbuf **obj_table, size_t n) override</td></tr>
 <tr class="separator:a81b01385564bf086deb9a2ea62836815"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,14 +109,23 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const o
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const override</td></tr>
 <tr class="separator:a8986b494b655ed73907d170600f876c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:af01f514bea3e45ca525956233bfbfac0"><td class="memItemLeft" align="right" valign="top"><a id="af01f514bea3e45ca525956233bfbfac0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>auto_lock</b> = std::lock_guard&lt; std::mutex &gt;</td></tr>
+<tr class="separator:af01f514bea3e45ca525956233bfbfac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a425727776bd724fca87aadb83fbe9b27"><td class="memItemLeft" align="right" valign="top"><a id="a425727776bd724fca87aadb83fbe9b27"></a>
 std::queue&lt; rte_mbuf * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>queue_</b></td></tr>
 <tr class="separator:a425727776bd724fca87aadb83fbe9b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad945d98f7a5fa69bcd3e851a824d935e"><td class="memItemLeft" align="right" valign="top"><a id="ad945d98f7a5fa69bcd3e851a824d935e"></a>
+std::mutex *&#160;</td><td class="memItemRight" valign="bottom"><b>m</b></td></tr>
+<tr class="separator:ad945d98f7a5fa69bcd3e851a824d935e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/slank/git/susanow/susanow/src/lib/include/<a class="el" href="ssnlib__ring_8h_source.html">ssnlib_ring.h</a></li>
+<li>/home/slank/git/susanow/lib/include/<a class="el" href="ssnlib__ring_8h_source.html">ssnlib_ring.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

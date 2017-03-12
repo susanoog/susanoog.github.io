@@ -1,0 +1,4 @@
+<map id="TimerDefault" name="TimerDefault">
+<area shape="rect" id="node2" href="$structssnlib_1_1Timer.html" title="{ssnlib::Timer\n||+ Timer()\l+ ~Timer()\l+ func()\l+ doo()\l}" alt="" coords="19,176,133,297"/>
+<area shape="rect" id="node4" href="$classssnlib_1_1System__interface.html" title="{ssnlib::System_interface\l\&lt; CPU, PORT \&gt;\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l+ launch_all()\l+ append_thread()\l+ cyclic_task()\l}" alt="" coords="157,132,347,341"/>
+</map>

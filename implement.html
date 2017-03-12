@@ -35,7 +35,7 @@
         <link rel="search" title="検索" href="search.html"/>
     <link rel="top" title="Susanow 0.0 ドキュメント" href="index.html"/>
         <link rel="next" title="Benchmark" href="benchmark.html"/>
-        <link rel="prev" title="Feature" href="feature.html"/> 
+        <link rel="prev" title="How to Use Susanow" href="howtouse.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -87,6 +87,7 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Motivation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtouse.html">How to Use Susanow</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Implementation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#rules">Rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#goal">Goal</a></li>
@@ -99,6 +100,8 @@
 <li class="toctree-l1"><a class="reference internal" href="drcp.html">Dynamic Re CPU Pinning (DRCP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extend Susanow</a></li>
 </ul>
 
             
@@ -151,7 +154,6 @@
 <blockquote>
 <div><ul class="simple">
 <li>Auto Optimization CPU Pinning</li>
-<li>do not use new operator</li>
 <li>Use SmartPtr to implement Polimorfizm</li>
 <li>Implement like a Library-OS</li>
 <li>Hate implicit prototypes</li>
@@ -162,9 +164,12 @@
 <li>All of needed Modules to implement Router,Switch.. are included</li>
 <li>Susanow calc Benchmark themselves</li>
 <li>Use iterator to loop syntax fastly</li>
-<li>[] doesn&#8217;t throw exception, .at() throw one</li>
+<li>don&#8217;t use [] operator, use .at().</li>
 </ul>
 </div></blockquote>
+<p>The [] operator doesn&#8217;t throw exception if specific range error index.
+The .at() function throw exception if that, but it is a little slow.
+User have to use .at() when random accsess and iterator when fast iteration.</p>
 <p>To write efficient code easily, Susanow is conposed as following.</p>
 <img alt="_images/susanow-design.png" src="_images/susanow-design.png" />
 <img alt="_images/susanow-design2.png" src="_images/susanow-design2.png" />
@@ -243,7 +248,7 @@ because there are many emails (most of spam) coming mu emailbox.</p>
         <a href="benchmark.html" class="btn btn-neutral float-right" title="Benchmark" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="feature.html" class="btn btn-neutral" title="Feature" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="howtouse.html" class="btn btn-neutral" title="How to Use Susanow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,0 +1,4 @@
+<map id="lcore_conf" name="lcore_conf">
+<area shape="rect" id="node2" href="$structlcore__rx__queue.html" title="{lcore_rx_queue\n|+ port_id\l+ queue_id\l|}" alt="" coords="5,5,125,97"/>
+<area shape="rect" id="node3" href="$structmbuf__table.html" title="{mbuf_table\n|+ len\l+ m_table\l|}" alt="" coords="155,5,247,97"/>
+</map>

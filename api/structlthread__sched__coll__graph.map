@@ -1,0 +1,10 @@
+<map id="lthread_sched" name="lthread_sched">
+<area shape="rect" id="node7" href="$structlthread.html" title="{lthread\n|+ state\l+ stack\l+ stack_size\l+ last_stack_size\l+ fun\l+ arg\l+ per_lthread_data\l+ birth\l+ join\l+ lt_exit_ptr\l+ qnode\l+ tim\l+ funcname\l+ diag_ref\l|}" alt="" coords="225,1116,373,1384"/>
+<area shape="rect" id="node8" href="$structlthread__tls.html" title="{lthread_tls\n|+ data\l+ nb_keys_inuse\l|}" alt="" coords="639,961,766,1053"/>
+<area shape="rect" id="node9" href="$structlthread__stack.html" title="{lthread_stack\n|+ stack\l+ stack_size\l|}" alt="" coords="207,961,321,1053"/>
+<area shape="rect" id="node2" href="$structctx.html" title="{ctx\n|+ rsp\l+ rbp\l+ rip\l+ rbx\l+ r12\l+ r13\l+ r14\l+ r15\l|}" alt="" coords="151,417,209,597"/>
+<area shape="rect" id="node3" href="$structlthread__queue.html" title="{lthread_queue\n|+ name\l|+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l}" alt="" coords="193,226,362,333"/>
+<area shape="rect" id="node6" href="$structlthread__objcache.html" title="{lthread_objcache\n|+ obj_size\l+ prealloc_size\l+ name\l|+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l}" alt="" coords="351,425,521,590"/>
+<area shape="rect" id="node4" href="$structqnode.html" title="{qnode\n|+ data\l|}" alt="" coords="457,5,521,83"/>
+<area shape="rect" id="node5" href="$structqnode__pool.html" title="{qnode_pool\n|+ pre_alloc\l+ name\l|+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l+ DIAG_COUNT_DEFINE()\l}" alt="" coords="478,204,647,355"/>
+</map>

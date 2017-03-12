@@ -87,10 +87,11 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction and Motivation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="feature.html">Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtouse.html">How to Use Susanow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="implement.html">Implementation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Benchmark</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#environment">Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#spec">Spec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-spec-pattern1">System Spec: Pattern1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#eveluation-point">Eveluation Point</a></li>
 </ul>
 </li>
@@ -98,6 +99,8 @@
 <li class="toctree-l1"><a class="reference internal" href="drcp.html">Dynamic Re CPU Pinning (DRCP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usecase.html">Usecases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extend Susanow</a></li>
 </ul>
 
             
@@ -186,34 +189,57 @@
 <h2>Environment<a class="headerlink" href="#environment" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <img alt="_images/bench.png" src="_images/bench.png" />
 </div>
-<div class="section" id="spec">
-<h2>Spec<a class="headerlink" href="#spec" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="system-spec-pattern1">
+<h2>System Spec: Pattern1<a class="headerlink" href="#system-spec-pattern1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="first docutils">
-<dt>CPU</dt>
-<dd><ul class="first last">
-<li>Core i7</li>
-<li>Xeon E5 1 socket</li>
-<li>Xeon E5 2 socket</li>
-<li>Xeon Phi</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>NIC</dt>
-<dd><ul class="first last">
-<li>Intel X540</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
 <dt>Tester</dt>
 <dd><ul class="first last">
-<li>Pktgen-DPDK</li>
-<li>Spirent</li>
+<li>CPU: Intel Core i7-3930K &#64; 3.8GHz x12core</li>
+<li>RAM: 32GB</li>
+<li>NIC: Intel X540 T2</li>
+<li>OS: Ubuntu 16.04 Xenial</li>
+<li>Soft: pktgen with DPDK-16.07</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>DUT</dt>
+<dd><ul class="first last">
+<li>CPU: Intel Core i7-3770 &#64; 3.9GHz x8core</li>
+<li>RAM: 16GB</li>
+<li>NIC: Intel X540 T2</li>
+<li>OS: Ubuntu 16.04 Xenial</li>
+<li>Soft: Susanow with DPDK-16.07</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>pktgen runnning Environment</p>
+<blockquote>
+<div><ul class="simple">
+<li>num of lcores for rx0: 7</li>
+<li>num of lcores for rx1: 7</li>
+<li>num of lcores for tx0/tx1: 1</li>
+<li>packet size: 128Byte</li>
+<li>burst size : 32</li>
+<li><dl class="first docutils">
+<dt>commandline</dt>
+<dd><ul class="first last">
+<li>option -m &#8220;[1-7:11].[0:0], [8-10:11].[1:1]&#8221;</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>runtime</dt>
+<dd><ul class="first last">
+<li>set all size 128</li>
+<li>set all burst 32</li>
 </ul>
 </dd>
 </dl>

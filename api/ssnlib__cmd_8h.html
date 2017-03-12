@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Susanow: /home/slank/git/susanow/susanow/src/lib/include/ssnlib_cmd.h File Reference</title>
+<title>Susanow: /home/slank/git/susanow/lib/include/ssnlib_cmd.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -58,12 +58,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_dfefae42a4cf55ba0761ace7a8746e62.html">susanow</a></li><li class="navelem"><a class="el" href="dir_42e714e673a008e3ed298e7cd0c41ee8.html">src</a></li><li class="navelem"><a class="el" href="dir_1c986b2db1db3ca31ca44c66fc2ee0ec.html">lib</a></li><li class="navelem"><a class="el" href="dir_06711b5a5bfd29157e251611fde414a0.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_dfefae42a4cf55ba0761ace7a8746e62.html">susanow</a></li><li class="navelem"><a class="el" href="dir_caa186dbe80251dce76ca8435da2090d.html">lib</a></li><li class="navelem"><a class="el" href="dir_eb86808081d7a2ccbd35739e5279aa2b.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">ssnlib_cmd.h File Reference</div>  </div>
 </div><!--header-->
@@ -73,21 +75,33 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cmdline_parse.h&gt;</code><br />
+<code>#include &lt;cmdline_parse_num.h&gt;</code><br />
+<code>#include &lt;cmdline_parse_string.h&gt;</code><br />
+<code>#include &lt;cmdline_parse_etheraddr.h&gt;</code><br />
+<code>#include &lt;cmdline_socket.h&gt;</code><br />
+<code>#include &lt;cmdline.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ssnlib_cmd.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="ssnlib__cmd_8h__incl.png" border="0" usemap="#_2home_2slank_2git_2susanow_2susanow_2src_2lib_2include_2ssnlib__cmd_8h" alt=""/></div>
+<div class="center"><img src="ssnlib__cmd_8h__incl.png" border="0" usemap="#_2home_2slank_2git_2susanow_2lib_2include_2ssnlib__cmd_8h" alt=""/></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="ssnlib__cmd_8h__dep__incl.png" border="0" usemap="#_2home_2slank_2git_2susanow_2susanow_2src_2lib_2include_2ssnlib__cmd_8hdep" alt=""/></div>
-<map name="_2home_2slank_2git_2susanow_2susanow_2src_2lib_2include_2ssnlib__cmd_8hdep" id="_2home_2slank_2git_2susanow_2susanow_2src_2lib_2include_2ssnlib__cmd_8hdep">
-<area shape="rect" id="node2" href="commands_8h_source.html" title="/home/slank/git/susanow\l/susanow/src/commands.h" alt="" coords="5,221,188,262"/>
-<area shape="rect" id="node3" href="ssnlib__shell_8h.html" title="include shell implementation " alt="" coords="225,213,416,269"/>
-<area shape="rect" id="node4" href="ssnlib__sys_8h.html" title="susanow lib top header " alt="" coords="107,109,297,165"/>
+<div class="center"><img src="ssnlib__cmd_8h__dep__incl.png" border="0" usemap="#_2home_2slank_2git_2susanow_2lib_2include_2ssnlib__cmd_8hdep" alt=""/></div>
+<map name="_2home_2slank_2git_2susanow_2lib_2include_2ssnlib__cmd_8hdep" id="_2home_2slank_2git_2susanow_2lib_2include_2ssnlib__cmd_8hdep">
+<area shape="rect" id="node2" href="example_2cmdline_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/cmdline/commands.h" alt="" coords="5,191,216,233"/>
+<area shape="rect" id="node3" href="example_2dta2_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/dta2/commands.h" alt="" coords="241,191,431,233"/>
+<area shape="rect" id="node4" href="example_2l2fwd_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/l2fwd/commands.h" alt="" coords="456,191,653,233"/>
+<area shape="rect" id="node5" href="example_2l2fwd__multithread_2commands_8h_source.html" title="/home/slank/git/susanow\l/example/l2fwd_multithread\l/commands.h" alt="" coords="927,184,1131,240"/>
+<area shape="rect" id="node6" href="ssnlib__shell_8h.html" title="include shell implementation " alt="" coords="1156,191,1367,233"/>
+<area shape="rect" id="node7" href="ssnlib__sys_8h.html" title="susanow lib top header " alt="" coords="692,95,889,136"/>
+<area shape="rect" id="node9" href="test_2commands_8h_source.html" title="/home/slank/git/susanow\l/test/commands.h" alt="" coords="1391,191,1574,233"/>
+<area shape="rect" id="node8" href="ssnlib__default_8h_source.html" title="/home/slank/git/susanow\l/lib/include/ssnlib_default.h" alt="" coords="678,191,903,233"/>
 </map>
 </div>
 </div>
@@ -95,8 +109,26 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssnlib_1_1Command.html">ssnlib::Command</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssnlib_1_1Command.html">ssnlib::Command</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a7c4ffd4f88cfd9c44737230ad6e34e35"><td class="memItemLeft" align="right" valign="top"><a id="a7c4ffd4f88cfd9c44737230ad6e34e35"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TOKEN_STRING</b>&#160;&#160;&#160;TOKEN_STRING_INITIALIZER</td></tr>
+<tr class="separator:a7c4ffd4f88cfd9c44737230ad6e34e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab46303ed22655c1acbdad1c6f78df3"><td class="memItemLeft" align="right" valign="top"><a id="afab46303ed22655c1acbdad1c6f78df3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TOKEN_NUMBER</b>&#160;&#160;&#160;TOKEN_NUM_INITIALIZER</td></tr>
+<tr class="separator:afab46303ed22655c1acbdad1c6f78df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a8ec2fe70339fd429e6f2f90b02a75de5"><td class="memItemLeft" align="right" valign="top"><a id="a8ec2fe70339fd429e6f2f90b02a75de5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ssnlib::token_str</b> = cmdline_parse_token_string_t</td></tr>
+<tr class="separator:a8ec2fe70339fd429e6f2f90b02a75de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409c4879a0606dd89a71ef69b3d3a506"><td class="memItemLeft" align="right" valign="top"><a id="a409c4879a0606dd89a71ef69b3d3a506"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ssnlib::token_num</b> = cmdline_parse_token_num_t</td></tr>
+<tr class="separator:a409c4879a0606dd89a71ef69b3d3a506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>definition abstract command class </p>

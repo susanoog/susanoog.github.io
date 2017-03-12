@@ -1,7 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classssnlib_1_1ssn__thread.html" title="ssnlib::ssn_thread" alt="" coords="5,81,153,108"/>
-<area shape="rect" id="node2" href="$classssnlib_1_1Shell.html" title="ssnlib::Shell" alt="" coords="201,5,315,32"/>
-<area shape="rect" id="node3" href="$classssnt__rx.html" title="ssnt_rx" alt="" coords="223,56,293,83"/>
-<area shape="rect" id="node4" href="$classssnt__tx.html" title="ssnt_tx" alt="" coords="223,107,293,133"/>
-<area shape="rect" id="node5" href="$classssnt__wk.html" title="ssnt_wk" alt="" coords="223,157,293,184"/>
+<area shape="rect" id="node1" href="$structlthread.html" title="lthread" alt="" coords="5,5,76,32"/>
 </map>
