@@ -1,5 +1,0 @@
-<map id="Cmd_dta" name="Cmd_dta">
-<area shape="rect" id="node2" href="$structssnlib_1_1Command.html" title="{ssnlib::Command\n|+ tokens\l+ raw\l|+ Command()\l+ ~Command()\l+ handle()\l+ init_raw()\l+ set_raw()\l+ append_token()\l+ append_token()\l+ token_fin()\l+ callback()\l}" alt="" coords="5,249,140,459"/>
-<area shape="rect" id="node3" href="$classdta2system.html" title="{dta2system\n|&#45; allocators\l|+ dta2system()\l+ append_dtaa_thread()\l+ inc()\l+ dec()\l+ start()\l+ stop()\l+ have_thread()\l}" alt="" coords="165,271,341,437"/>
-<area shape="rect" id="node4" href="$classssnlib_1_1System__interface.html" title="{System\n|+ cpus\l+ ports\l+ cpuflags\l|+ System_interface()\l+ ~System_interface()\l+ halt()\l+ wait_all()\l+ launch_all()\l+ append_thread()\l+ cyclic_task()\l}" alt="" coords="168,5,337,200"/>
-</map>

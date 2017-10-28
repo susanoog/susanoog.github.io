@@ -1,7 +1,0 @@
-<map id="ssnlib::Port_interface&lt; RXQ, TXQ &gt;" name="ssnlib::Port_interface&lt; RXQ, TXQ &gt;">
-<area shape="rect" id="node2" href="$classssnlib_1_1dev__info.html" title="{ssnlib::dev_info\n|+ id\l+ raw\l|+ dev_info()\l+ get()\l}" alt="" coords="5,220,140,327"/>
-<area shape="rect" id="node3" href="$classssnlib_1_1port__stats.html" title="{ssnlib::port_stats\n|+ id\l+ rx_pps\l+ tx_pps\l+ rx_bps\l+ tx_bps\l+ last_update\l+ init\l+ cure_prev\l+ cure\l&#45; IFG\l&#45; PAM\l&#45; FCS\l&#45; IFO\l|+ port_stats()\l+ reset()\l+ update()\l}" alt="" coords="164,132,312,415"/>
-<area shape="rect" id="node4" href="$classssnlib_1_1ether__addr.html" title="{ssnlib::ether_addr\n|+ id\l|+ ether_addr()\l+ print()\l+ toString()\l+ update()\l+ set()\l+ add()\l+ del()\l}" alt="" coords="336,191,484,356"/>
-<area shape="rect" id="node6" href="$classssnlib_1_1port__conf.html" title="{ssnlib::port_conf\n|+ id\l+ raw\l|+ port_conf()\l}" alt="" coords="509,227,650,319"/>
-<area shape="rect" id="node7" href="$classssnlib_1_1link__stats.html" title="{ssnlib::link_stats\n|+ id\l+ raw\l|+ link_stats()\l+ update()\l}" alt="" coords="675,220,823,327"/>
-</map>

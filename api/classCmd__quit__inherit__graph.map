@@ -1,4 +1,0 @@
-<map id="Cmd_quit" name="Cmd_quit">
-<area shape="rect" id="node2" href="$structssnlib_1_1Command.html" title="{ssnlib::Command\n|+ tokens\l+ raw\l|+ Command()\l+ ~Command()\l+ handle()\l+ init_raw()\l+ set_raw()\l+ append_token()\l+ append_token()\l+ token_fin()\l+ callback()\l}" alt="" coords="5,5,140,215"/>
-<area shape="rect" id="node3" href="$classnode.html" title="{node\n|+ name\l+ commands\l|+ node()\l+ ~node()\l+ function()\l+ append_childnode()\l+ next()\l+ match()\l}" alt="" coords="165,27,327,193"/>
-</map>
